@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Coffee House - fresh coffee, snacks and easy online ordering.">
+<title>Coffee House | Fresh Coffee Everyday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <nav class="navbar">
+    <a class="logo" href="#home"><span>☕</span> Coffee <em>House</em></a>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#menu">Menu</a>
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button id="userBtn" class="user-btn" onclick="openUser()"></button>
+      <button class="cart-btn" onclick="openCart()"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount">0</span></button>
+    </div>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow anim-fade-up">EST. 2026 • HANSI</span>
+    <h1 class="anim-fade-up delay-1">Good coffee.<br><span>Good mood.</span></h1>
+    <p class="anim-fade-up delay-2">Freshly brewed coffee, handcrafted drinks and delicious bites made for your everyday moments.</p>
+    <div class="hero-actions anim-fade-up delay-3">
+      <a href="#menu" class="btn primary pulse-glow">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+      <button class="btn ghost" onclick="openCart()">View Cart</button>
+    </div>
+    <div class="hero-stats anim-fade-up delay-4">
+      <div><b>9+</b><span>Menu items</span></div>
+      <div><b>4.9★</b><span>Customer rating</span></div>
+      <div><b>30 min</b><span>Fast delivery</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about section" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Coffee being prepared" loading="lazy">
+    <div class="experience"><strong>100%</strong><span>Fresh &<br>quality</span></div>
+  </div>
+  <div class="about-text">
+    <span class="section-label">OUR STORY</span>
+    <h2>More than coffee,<br><i>it's a feeling.</i></h2>
+    <p>Welcome to Coffee House — your neighborhood place for great coffee and relaxed conversations. We select quality beans, prepare every drink with care, and keep our menu simple, fresh and affordable.</p>
+    <div class="features">
+      <div><i class="fa-solid fa-seedling"></i><span><b>Fresh beans</b>Roasted for rich flavor</span></div>
+      <div><i class="fa-solid fa-heart"></i><span><b>Made with care</b>Every cup, every time</span></div>
+      <div><i class="fa-solid fa-truck-fast"></i><span><b>Quick delivery</b>Fresh at your doorstep</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="menu section" id="menu">
+  <div class="section-head">
+    <div>
+      <span class="section-label">WHAT WE SERVE</span>
+      <h2>Our <i>Menu</i></h2>
+    </div>
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="menuSearch" placeholder="Search coffee, snacks...">
+    </div>
+  </div>
+  <div class="categories" id="categories"></div>
+  <div class="menu-box" id="menuBox"></div>
+</section>
+
+<section class="promo">
+  <div>
+    <span class="section-label">TODAY'S TREAT</span>
+    <h2>Make your coffee break<br><i>a little sweeter.</i></h2>
+    <p>Order any 2 drinks and get ₹50 off your next visit.</p>
+    <a href="#menu" class="btn primary">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+  <div class="promo-cup">☕</div>
+</section>
+
+<section class="gallery section" id="gallery">
+  <div class="section-head">
+    <div>
+      <span class="section-label">INSIDE COFFEE HOUSE</span>
+      <h2>Moments worth <i>sharing.</i></h2>
+    </div>
+    <p class="head-copy">A cozy corner, a warm cup and your favorite people.</p>
+  </div>
+  <div class="gallery-box">
+    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80" alt="Coffee Cup" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Cappuccino" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=700&q=80" alt="Latte Art" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=700&q=80" alt="Espresso Shot" loading="lazy">
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <span class="section-label">COME SAY HELLO</span>
+      <h2>Let's make today<br><i>a coffee day.</i></h2>
+    </div>
+    <div class="contact-info">
+      <p><i class="fa-solid fa-location-dot"></i><span><b>Visit us</b>Hansi, Haryana</span></p>
+      <p><i class="fa-solid fa-phone"></i><span><b>Call us</b>+91 9876543210</span></p>
+      <p><i class="fa-solid fa-envelope"></i><span><b>Email</b>coffeehouse@gmail.com</span></p>
+      <p><i class="fa-solid fa-clock"></i><span><b>Open daily</b>8:00 AM – 10:00 PM</span></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a class="logo" href="#home">☕ Coffee <em>House</em></a>
+    <p>Fresh coffee. Good mood. Every day.</p>
+    <div class="social">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Coffee House. All Rights Reserved. <span>Made by Prince Kumar</span></div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="closePanels()"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <div><span class="section-label">YOUR ORDER</span><h3>Shopping Cart</h3></div>
+    <button onclick="closePanels()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-summary">
+    <div><span>Subtotal</span><b id="subtotal">₹0</b></div>
+    <div><span>Delivery</span><b id="delivery">₹0</b></div>
+    <div class="grand"><span>Total</span><b id="total">₹0</b></div>
+    <button id="checkoutBtn" class="btn primary full" onclick="openCheckout()">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+</aside>
+
+<div class="modal" id="loginModal">
+  <div class="modal-box auth-box">
+    <button class="modal-close" onclick="closePanels()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="auth-brand">☕</div>
+    <h2>Welcome to Coffee House</h2>
+    <p class="muted">Login to place orders and view your order history.</p>
+    <div class="auth-tabs">
+      <button id="loginTab" class="active" onclick="switchAuth('login')">Login</button>
+      <button id="registerTab" onclick="switchAuth('register')">Create account</button>
+    </div>
+    <form id="loginForm" onsubmit="login(event)">
+      <label>Name<input name="name" required placeholder="Your name"></label>
+      <label>Email<input name="email" type="email" required placeholder="you@example.com"></label>
+      <button class="btn primary full">Login <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+    <form id="registerForm" class="hidden" onsubmit="register(event)">
+      <label>Full name<input name="name" required placeholder="Your name"></label>
+      <label>Email<input name="email" type="email" required placeholder="you@example.com"></label>
+      <label>Password<input name="password" type="password" minlength="4" required placeholder="Create password"></label>
+      <button class="btn primary full">Create Account <i class="fa-solid fa-user-plus"></i></button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-box checkout-box">
+    <button class="modal-close" onclick="closePanels()"><i class="fa-solid fa-xmark"></i></button>
+    <span class="section-label">CHECKOUT</span>
+    <h2>Complete your order</h2>
+    <div class="checkout-layout">
+      <div>
+        <form onsubmit="placeOrder(event)">
+          <label>Phone number<input name="phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number"></label>
+          <label>Delivery address<textarea name="address" required rows="3" placeholder="House no., street, city"></textarea></label>
+          <label>Payment method
+            <select name="payment">
+              <option>Cash on Delivery</option>
+              <option>UPI</option>
+              <option>Card</option>
+            </select>
+          </label>
+          <button class="btn primary full">Place Order <i class="fa-solid fa-check"></i></button>
+        </form>
+      </div>
+      <div class="checkout-summary">
+        <h4>Order summary</h4>
+        <div id="checkoutItems"></div>
+        <hr>
+        <div class="summary-total"><span>Total</span><b id="checkoutTotal">₹0</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="orderModal">
+  <div class="modal-box orders-box">
+    <button class="modal-close" onclick="closePanels()"><i class="fa-solid fa-xmark"></i></button>
+    <span class="section-label">MY ACCOUNT</span>
+    <h2>My Orders</h2>
+    <div id="ordersList"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
